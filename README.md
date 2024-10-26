@@ -21,8 +21,8 @@
 2. Clone this repository or download the `main.py` file directly.
    
    ```bash
-   git clone <repository-url>
-   cd <repository-directory>
+   git clone https://github.com/emi-rose/DIE
+   cd DIE/src 
    ```
 
 3. Run the program using the following command:
