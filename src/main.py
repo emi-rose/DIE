@@ -18,13 +18,32 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 import random
+import argparse
 
-# Ask the user for the range
-min_value = int(input("Enter the minimum value: "))
-max_value = int(input("Enter the maximum value: "))
+# Set up command-line argument parsing
+parser = argparse.ArgumentParser(description="Generate a random number within a specified range and interval.")
+parser.add_argument('-min', type=int, help="Minimum value (inclusive).")
+parser.add_argument('-max', type=int, help="Maximum value (inclusive).")
+parser.add_argument('-interval', type=int, help="Count interval.")
 
-# Ask the user for the count interval
-interval = int(input("Enter the count interval: "))
+args = parser.parse_args()
+
+# Ask the user for the range if not provided as an argument
+if args.min is not None:
+    min_value = args.min
+else:
+    min_value = int(input("Enter the minimum value: "))
+
+if args.max is not None:
+    max_value = args.max
+else:
+    max_value = int(input("Enter the maximum value: "))
+
+# Ask the user for the count interval if not provided as an argument
+if args.interval is not None:
+    interval = args.interval
+else:
+    interval = int(input("Enter the count interval: "))
 
 # Generate a list of numbers in the specified range and interval
 number_list = list(range(min_value, max_value + 1, interval))

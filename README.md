@@ -37,7 +37,6 @@
 2. Next, enter the **maximum value** for the range.
 3. Finally, specify the **count interval**. This determines the step size for generating numbers in the range.
 4. The program will output a randomly selected number from the generated list, simulating the result of rolling a die.
-
 ### Example
 
 ```
@@ -45,6 +44,11 @@ Enter the minimum value: 1
 Enter the maximum value: 100
 Enter the count interval: 10
 Random number: 30
+```
+
+## Quick Rolls /w Arguments
+```bash
+python main.py -min 0 -max 20 -interval 1
 ```
 
 ## License
